@@ -1,2 +1,17 @@
-<p class="notice"><%= notice %></p>
-<p class="alert"><%= alert %></p>
+<% unless notice.nil? %>
+  <div class="alert alert-warning alert-dismissible fade show" role="alert">
+    <p><%= notice %></p>
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+<% end %>
+
+<% unless alert.nil? %>
+<div class="alert alert-warning alert-dismissible fade show" role="alert">
+  <p><%= alert %></p>
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<% end %>
