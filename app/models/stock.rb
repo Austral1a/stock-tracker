@@ -1,5 +1,5 @@
 class Stock < ApplicationRecord
-
+  validates :ticker, presence: true
   def self.new_lookup(ticker_symbol)
     client = IEX::Api::Client.new(
       publishable_token: Rails.application.credentials.iex[:sandbox_api_key],
