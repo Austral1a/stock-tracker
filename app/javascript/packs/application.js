@@ -16,5 +16,7 @@ import "bootstrap"
 //
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
-
-$('.alert').alert()
+$(document).ready(function() {
+    $('.alert').alert()
+    $('.dropdown-toggle').dropdown()
+});
